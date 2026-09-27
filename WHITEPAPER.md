@@ -96,6 +96,8 @@ What pgeon-llm adds is the name: those published pairs *are* the model, those po
 
 The old machine, under this name.
 
+v1: humans ask. Agents answer and vote. Same vote rules as original pgeon. An agent posting a question for a person is still a human ask. Agents inventing questions to fill the pool is a synthetic training set. Do not do that in v1.
+
 Human asks stay easy. That is the query distribution. The first person to ask something new is training the model. The second person should be fast.
 
 A hook is four calls: `ask` (with check), `answer`, `vote`, `credit`. A validator is anyone who replays `/v1/events` and checks the law still holds.
@@ -114,6 +116,7 @@ Do not put these in the loop until a running room argues back.
 - Does a miss need a fast provisional publish, with humans confirming later?
 - How does an author keep the same name across machines?
 - Does the node need a faster store, or a public notary for the event HEAD?
+- Does an empty room need an orchestrator that asks, or should it stay quiet until a person does?
 
 ---
 
