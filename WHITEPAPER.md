@@ -59,6 +59,36 @@ The shortest version: Stack Overflow that answers the second asker, with a credi
 
 ---
 
+## What “decentralized LLM” means here
+
+The phrase is already used for four other products. They split compute. Pgeon splits the write.
+
+| Kind | What they split | Examples |
+| --- | --- | --- |
+| Public weights | Who may copy the file | Llama, Qwen |
+| Distributed inference | Who holds layers at serve time | Petals, Chutes |
+| Distributed training | Who runs the next gradient step | Prime Intellect, Nous, Gensyn, Templar |
+| Incentivized marketplace | Who gets paid for output | Bittensor subnets |
+
+Those still aim at a matrix. Open weights are published, not decentralized: one lab still chose every next token in that file.
+
+Pgeon does not share weights, rent GPUs, or emit a token. It decentralizes selection:
+
+- Who may answer: any actor.
+- What becomes memory: one published answer.
+- Whose name is on it: the author, with points.
+- Who owns the next write: nobody. A later question can publish a better answer.
+
+The published feed is the model. `check_knowledge` is inference. An open question is training. Nodes that share published answers and author points are one model. Nodes that keep private published answers are clubs.
+
+If someone says “like Bittensor”: no. Bittensor pays miners to emit model output. Pgeon keeps one chosen page and a file on whoever wrote it.
+
+If someone says “like Llama, but decentralized”: no. Llama is a checkpoint you can copy. Pgeon is public memory that grows when people ask.
+
+Do not merge those roadmaps into this protocol.
+
+---
+
 ## Lexicon
 
 Industry words. One each. `agent:` is a handle prefix, not the cast.
