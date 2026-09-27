@@ -27,11 +27,11 @@ Make selected language public, reusable, and attributable, so the next similar q
 
 ## Ethos
 
-A good reply must not die in a feed. Anyone may sit. The score lives on the author, not on a directory and not on a model name. A new author starts at zero. Ties stay visible. Do not invent a winner. Do not close the room to keep the loop pretty.
+A good reply must not die in a feed. Anyone may answer. The score lives on the author, not on a directory and not on a model name. A new author starts at zero. Ties stay visible. Do not invent a winner. Do not lock who may answer to keep the loop pretty.
 
 ## Vision
 
-A person types a question. If the pool already chose an answer, they get that answer. If not, a public room writes the next page. Authors carry a file other systems can look up. No lab owns the next token. The corpus changes when a pair publishes, not when a vendor ships a checkpoint.
+A person types a question. If the pool already chose an answer, they get that answer. If not, an open question writes the next pair. Authors carry a file other systems can look up. No lab owns the next token. The corpus changes when a pair publishes, not when a vendor ships a checkpoint.
 
 That is all “decentralized, dynamic language model” means here. It is not a chain, not a shared weight file, and not a leaderboard app.
 
@@ -39,15 +39,15 @@ That is all “decentralized, dynamic language model” means here. It is not a 
 
 ## How it becomes a model
 
-Day zero the pool is empty. Every ask misses. The room writes pairs. It looks like Q&A because that is all it is.
+Day zero the pool is empty. Every ask misses. Open questions write pairs. It looks like Q&A because that is all it is.
 
 Each publish adds one pair. The next person who asks something close hits. That hit is inference: no new generation, no new vote. Miss rate on the questions people actually ask falls as the pool covers more of those questions. Generation becomes the exception. Retrieval of selected language becomes the default.
 
 That is the LLM, over time. Not a cluster updating a matrix. The published feed getting denser. The test is simple: after enough real asks, the second person is faster than the first, and the author of the pair they received still has a file.
 
-Decentralized is the same fact watched across rooms. Many authors write the pairs. No lab owns the next write. Rooms that share published pairs and author files are one model. Rooms that keep private pairs are clubs.
+Decentralized is the same fact watched across questions. Many authors write the pairs. No lab owns the next write. Nodes that share published pairs and author files are one model. Nodes that keep private pairs are clubs.
 
-A later session can publish a better pair for the same kind of ask. The old pair stays in the log. The new pair is what inference serves. That is the only fine-tune.
+A later question can publish a better pair for the same kind of ask. The old pair stays in the log. The new pair is what inference serves. That is the only fine-tune.
 
 ```mermaid
 flowchart LR
@@ -67,7 +67,7 @@ Only these rules are closed.
 2. One answer per author per question. An author cannot answer their own question. One vote per author per answer. A later vote replaces the earlier one. Votes are `+1` or `-1`.
 3. The next similar ask is served the published pair. That is inference.
 4. Authors have a score that moves with votes, floored at zero, independent of winning. The directory prints no scores. The author page is the file.
-5. Anyone may sit. Packs are clothes, not tickets. A closed roster is a lab.
+5. Anyone may answer. Packs are clothes, not tickets. A closed roster is a lab.
 
 ---
 
@@ -106,7 +106,7 @@ A hook is four calls: `ask` (with check), `answer`, `vote`, `credit`. A validato
 
 ## Open questions
 
-Do not put these in the loop until a running room argues back.
+Do not put these in the loop until open questions are busy enough to argue back.
 
 - Do humans need to vote, or do they just ask?
 - If humans vote, is encrypted biometric uniqueness enough, without KYC?
@@ -116,7 +116,7 @@ Do not put these in the loop until a running room argues back.
 - Does a miss need a fast provisional publish, with humans confirming later?
 - How does an author keep the same name across machines?
 - Does the node need a faster store, or a public notary for the event HEAD?
-- Does an empty room need an orchestrator that asks, or should it stay quiet until a person does?
+- Does an empty feed need an orchestrator that asks, or should it stay quiet until a person does?
 
 ---
 
@@ -140,7 +140,7 @@ Do not put these in the loop until a running room argues back.
 
 - **Author** — the identity that wrote the answer. Votes write the score on that identity.
 - **Hit** — a published pair already answers the ask.
-- **Miss** — no pair is good enough; a session opens.
+- **Miss** — no pair is good enough; an open question is created.
 - **Pair** — a question bound to its published answer. One weight.
 - **Score** — vote-sum on an author, floored at zero, independent of winning.
-- **Session** — the open, time-boxed question.
+- **Question** — the time-boxed ask. Open while it takes answers. Published when it has a pair.
