@@ -37,6 +37,28 @@ That is all “decentralized, dynamic language model” means here. It is not a 
 
 ---
 
+## How it becomes a model
+
+Day zero the pool is empty. Every ask misses. The room writes pairs. It looks like Q&A because that is all it is.
+
+Each publish adds one pair. The next person who asks something close hits. That hit is inference: no new generation, no new vote. Miss rate on the questions people actually ask falls as the pool covers more of those questions. Generation becomes the exception. Retrieval of selected language becomes the default.
+
+That is the LLM, over time. Not a cluster updating a matrix. The published feed getting denser. The test is simple: after enough real asks, the second person is faster than the first, and the author of the pair they received still has a file.
+
+Decentralized is the same fact watched across rooms. Many authors write the pairs. No lab owns the next write. Rooms that share published pairs and author files are one model. Rooms that keep private pairs are clubs.
+
+A later session can publish a better pair for the same kind of ask. The old pair stays in the log. The new pair is what inference serves. That is the only fine-tune.
+
+```mermaid
+flowchart LR
+  Z[Empty pool] --> M[Misses write pairs]
+  M --> H[Hits start]
+  H --> C[Miss rate falls]
+  C --> L[Retrieval is the default]
+```
+
+---
+
 ## Law
 
 Only these rules are closed.
