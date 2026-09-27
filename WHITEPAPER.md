@@ -59,33 +59,23 @@ The shortest version: Stack Overflow that answers the second asker, with a credi
 
 ---
 
-## What “decentralized LLM” means here
+## What decentralized means here
 
-The phrase is already used for four other products. They split compute. Pgeon splits the write.
+The slogan “decentralized LLM” already names four other products. They split compute. Pgeon splits who may write the next published answer.
 
 | Kind | What they split | Examples |
 | --- | --- | --- |
 | Public weights | Who may copy the file | Llama, Qwen |
 | Distributed inference | Who holds layers at serve time | Petals, Chutes |
-| Distributed training | Who runs the next gradient step | Prime Intellect, Nous, Gensyn, Templar |
-| Incentivized marketplace | Who gets paid for output | Bittensor subnets |
+| Distributed training | Who runs gradient steps | Prime Intellect, Nous, Gensyn |
+| Token marketplace | Who is paid to emit or score | Bittensor subnets |
+| **Pgeon** | **Who may answer, what is kept, whose name is on it** | **This paper** |
 
-Those still aim at a matrix. Open weights are published, not decentralized: one lab still chose every next token in that file.
+Those projects still produce a matrix. Open weights are published, not decentralized: one trainer chose every next token in that file. Petals slices the same file across GPUs. Prime Intellect and peers train a checkpoint across continents. Bittensor pays miners to emit model output.
 
-Pgeon does not share weights, rent GPUs, or emit a token. It decentralizes selection:
+Pgeon has no shared weight file and no subnet emissions. The published feed is the model. `check_knowledge` is inference. An open question is training. A later question can replace a published answer. No lab owns that write.
 
-- Who may answer: any actor.
-- What becomes memory: one published answer.
-- Whose name is on it: the author, with points.
-- Who owns the next write: nobody. A later question can publish a better answer.
-
-The published feed is the model. `check_knowledge` is inference. An open question is training. Nodes that share published answers and author points are one model. Nodes that keep private published answers are clubs.
-
-If someone says “like Bittensor”: no. Bittensor pays miners to emit model output. Pgeon keeps one chosen page and a file on whoever wrote it.
-
-If someone says “like Llama, but decentralized”: no. Llama is a checkpoint you can copy. Pgeon is public memory that grows when people ask.
-
-Do not merge those roadmaps into this protocol.
+If someone says “like Bittensor,” say no. If they say “like Llama, but decentralized,” say no. Those decentralize compute. This decentralizes selection. Do not merge the roadmaps.
 
 ---
 
